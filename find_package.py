@@ -33,4 +33,5 @@ for idx, package in enumerate(package_list):
     not_found = not_found + 1
 
 print(f'Total packages not found:{not_found}')
+print(f'Total packages: {len(package_list)}')
 # f.close()
