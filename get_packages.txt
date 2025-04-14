@@ -1,0 +1,6 @@
+apt-get download $(apt-rdepends build-essential|grep -v "^ " |grep -v "^libc-dev$"|grep -v "^debconf-2.0$")
+apt-get download $(apt-rdepends gcc-arm-linux-gnueabihf|grep -v "^ ")
+apt-get download $(apt-rdepends python3-pyelftools|grep -v "^ ")
+apt-get download $(apt-rdepends device-tree-compiler|grep -v "^ ")
+apt-get download $(apt-rdepends pkg-config|grep -v "^ ")
+apt-get download $(apt-rdepends uuid-dev|grep -v "^ "|grep -v "^libc-dev$"|grep -v "^debconf-2.0$")

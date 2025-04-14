@@ -14,7 +14,7 @@ def load_package_list(file_path):
 
 # Path to your package_list.txt file
 package_list_file = "package_list.txt"
-# f = open('package_url.txt', 'w')
+f = open('package_url.txt', 'w')
 full_list_file = "full_package_url.txt"
 
 # Load the package names from the file
@@ -26,7 +26,7 @@ not_found = 0
 for idx, package in enumerate(package_list):
   for url in url_list:
     if package in url:
-        # print(url)
+        f.write(f'{url}\n')
         found[idx] = 1
   if found[idx] == 0:
     print(f'Package not found: {package}')
@@ -34,4 +34,4 @@ for idx, package in enumerate(package_list):
 
 print(f'Total packages not found:{not_found}')
 print(f'Total packages: {len(package_list)}')
-# f.close()
+f.close()

@@ -4,6 +4,7 @@ gcc-12-base_12.3.0-1ubuntu1~22.04_arm64.deb
 g++-11_11.4.0-1ubuntu1~22.04_arm64.deb
 libgcc-s1_12.3.0-1ubuntu1~22.04_arm64.deb
 libstdc++6-armhf-cross_12.3.0-1ubuntu1~22.04cross1_all.deb
+libmount1_2.37.2-4ubuntu3.4_arm64.deb
 libpcre2-8-0_10.39-3ubuntu0.1_arm64.deb
 libmpfr6_4.1.0-3build3_arm64.deb
 libcc1-0_12.3.0-1ubuntu1~22.04_arm64.deb
@@ -24,11 +25,13 @@ libzstd1_1.4.8+dfsg-3build1_arm64.deb
 gcc-arm-linux-gnueabihf_11.2.0-1ubuntu1_arm64.deb
 binutils_2.38-4ubuntu2.8_arm64.deb
 libcom-err2_1.46.5-2ubuntu1.2_arm64.deb
+libffi8_3.4.2-4_arm64.deb
 libbinutils_2.38-4ubuntu2.8_arm64.deb
 libcrypt1_4.4.27-1_arm64.deb
 libisl23_0.24-2build1_arm64.deb
 zlib1g_1.2.11.dfsg-2ubuntu9.2_arm64.deb
 liblsan0_12.3.0-1ubuntu1~22.04_arm64.deb
+pkg-config_0.29.2-1ubuntu3_arm64.deb
 libssl3_3.0.2-0ubuntu1.19_arm64.deb
 cpp-arm-linux-gnueabihf_11.2.0-1ubuntu1_arm64.deb
 lto-disabled-list_24_all.deb
@@ -66,9 +69,11 @@ libgomp1_12.3.0-1ubuntu1~22.04_arm64.deb
 binutils-common_2.38-4ubuntu2.8_arm64.deb
 libc6_2.35-0ubuntu3.9_arm64.deb
 gcc-11-arm-linux-gnueabihf-base_11.4.0-1ubuntu1~22.04cross1_arm64.deb
+libpcre3_8.39-13ubuntu0.22.04.1_arm64.deb
 libgcc-11-dev-armhf-cross_11.4.0-1ubuntu1~22.04cross1_all.deb
 libyaml-0-2_0.2.2-1build2_arm64.deb
 gcc-12-cross-base_12.3.0-1ubuntu1~22.04cross1_all.deb
+libuuid1_2.37.2-4ubuntu3.4_arm64.deb
 rpcsvc-proto_1.4.2-0ubuntu6_arm64.deb
 linux-libc-dev_5.15.0-136.147_arm64.deb
 libc6-armhf-cross_2.35-0ubuntu1cross3_all.deb
@@ -79,6 +84,7 @@ libkeyutils1_1.6.1-2ubuntu3_arm64.deb
 libbz2-1.0_1.0.8-5build1_arm64.deb
 cpp-11_11.4.0-1ubuntu1~22.04_arm64.deb
 liblzma5_5.2.5-2ubuntu1_arm64.deb
+libglib2.0-0_2.72.4-0ubuntu2.4_arm64.deb
 gcc-11-cross-base_11.4.0-1ubuntu1~22.04cross1_all.deb
 libatomic1_12.3.0-1ubuntu1~22.04_arm64.deb
 libtsan0_11.4.0-1ubuntu1~22.04_arm64.deb
@@ -89,3 +95,4 @@ libgomp1-armhf-cross_12.3.0-1ubuntu1~22.04cross1_all.deb
 libasan6_11.4.0-1ubuntu1~22.04_arm64.deb
 libcrypt-dev_4.4.27-1_arm64.deb
 perl-base_5.34.0-3ubuntu1.3_arm64.deb
+uuid-dev_2.37.2-4ubuntu3.4_arm64.deb
