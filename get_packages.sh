@@ -9,35 +9,29 @@ if [[ "$EUID" -ne 0 ]]; then
     exit 1
 fi
 
-echo "Starting to download package dependencies..."
+# Check if at least one package name was provided
+if [[ "$#" -eq 0 ]]; then
+    echo "Usage: $0 <package1> [package2 ...]"
+    exit 1
+fi
 
-# Download dependencies for build-essential, excluding libc-dev and debconf-2.0
-apt-get download $(apt-rdepends build-essential \
-    | grep -v "^ " \
-    | grep -v "^libc-dev$" \
-    | grep -v "^debconf-2.0$")
+echo "Starting to download package dependencies for: $@"
 
-# Download dependencies for gcc-arm-linux-gnueabihf
-apt-get download $(apt-rdepends gcc-arm-linux-gnueabihf \
-    | grep -v "^ ")
+# Define any exclusions (add or remove patterns as needed)
+EXCLUDE_PATTERNS="^libc-dev$|^debconf-2.0$"
 
-# Download dependencies for python3-pyelftools
-apt-get download $(apt-rdepends python3-pyelftools \
-    | grep -v "^ ")
+for pkg in "$@"; do
+    echo "Processing package: $pkg"
 
-# Download dependencies for device-tree-compiler
-apt-get download $(apt-rdepends device-tree-compiler \
-    | grep -v "^ ")
-
-# Download dependencies for pkg-config
-apt-get download $(apt-rdepends pkg-config \
-    | grep -v "^ ")
-
-# Download dependencies for uuid-dev, excluding libc-dev and debconf-2.0
-apt-get download $(apt-rdepends uuid-dev \
-    | grep -v "^ " \
-    | grep -v "^libc-dev$" \
-    | grep -v "^debconf-2.0$")
+    # Download dependencies excluding the ones matching EXCLUDE_PATTERNS
+    apt-get download $(
+        apt-rdepends "$pkg" \
+        | grep -v "^ " \
+        | grep -Ev "$EXCLUDE_PATTERNS"
+    )
+done
 
 echo "All downloads completed successfully."
 
+# sudo ../getDebianPackageUrl/get_packages.sh build-essential gcc-arm-linux-gnueabihf python3-pyelftools device-tree-compiler pkg-config uuid-dev
+# sudo ../getDebianPackageUrl/get_packages.sh dislocker cryptsetup libcryptsetup-dev libcryptsetup12 cryptmount cryptmount overlayroot qemu-user-static
