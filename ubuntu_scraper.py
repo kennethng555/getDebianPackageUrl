@@ -39,9 +39,7 @@ def get_deb_files(full_list, f, url, package_list, found, depth=0):
         
         # If the link is a .deb file, check if it matches a package in the list
         if href.endswith('.deb'):
-            if href.endswith('_arm64.deb') or href.endswith('_all.deb'):
-              full_list.write(f'{full_url}\n')
-              print(full_url)
+            full_list.write(f'{full_url}\n')
             for idx, package in enumerate(package_list):
                 if package in href:  # Match package name (without version)
                     deb_files.append(full_url)
@@ -78,7 +76,7 @@ package_list = load_package_list(package_list_file)
 found = [0] * len(package_list)
 
 # URL to the pool/main directory
-base_url = "http://ports.ubuntu.com/pool/main/"
+base_url = "http://ports.ubuntu.com/pool/"
 deb_files = get_deb_files(full_list, f, base_url, package_list, found)
 
 # Print out the list of .deb files found for the specified packages
