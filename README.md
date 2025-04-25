@@ -7,8 +7,8 @@ Pull debian packages and all dependencies on a debian machine to a directory and
 ```
 mkdir packages
 cd packages
-sudo ../get_packages.sh build-essential
-cd ..
+sudo ../debian/get_packages.sh build-essential
+cd ../debian
 python ./package_to_text.py ./packages
 ```
 
@@ -24,5 +24,5 @@ On your non Debian based machine get all the packages
 ```
 mkdir packages
 cd packages
-./batch_wget.sh ../package_list.txt
+./batch_wget.sh ../debian/package_list.txt
 ```
