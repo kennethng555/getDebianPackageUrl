@@ -30,6 +30,7 @@ libattr1_2.5.1-1build1_arm64.deb
 libgcrypt20_1.9.4-3ubuntu3_arm64.deb
 util-linux_2.37.2-4ubuntu3.4_arm64.deb
 g++_11.2.0-1ubuntu1_arm64.deb
+minicom_2.8-2_arm64.deb
 python3-yaml_5.4.1-1ubuntu1_arm64.deb
 cpp-11-arm-linux-gnueabihf_11.4.0-1ubuntu1~22.04cross1_arm64.deb
 libss2_1.46.5-2ubuntu1.2_arm64.deb

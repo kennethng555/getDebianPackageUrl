@@ -67,9 +67,9 @@ def load_package_list(file_path):
     return package_list
 
 # Path to your package_list.txt file
-package_list_file = "package_list.txt"
-f = open('package_url.txt', 'w')
-full_list = open('../target/full_package_url.txt', 'w')
+package_list_file = "../debian/package_list.txt"
+f = open('../debian/package_url.txt', 'w')
+full_list = open('../targetOS/full_package_url.txt', 'w')
 
 # Load the package names from the file
 package_list = load_package_list(package_list_file)
