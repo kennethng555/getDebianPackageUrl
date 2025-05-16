@@ -1,3 +1,5 @@
+import sys
+
 def load_package_list(file_path):
     """
     Loads a list of package names from a file (one per line).
@@ -12,10 +14,19 @@ def load_package_list(file_path):
         package_list = [line.strip() for line in f.readlines()]
     return package_list
 
-# Path to your package_list.txt file
-package_list_file = "../debian/package_list.txt"
-f = open('../debian/package_url.txt', 'w')
-full_list_file = "./full_package_url.txt"
+if len(sys.argv) < 3:
+    print("Usage: ubuntu_scraper.py <package_list_file> <output_file> <full_list_file>\n\n")
+    print("package_list_file: Path to the file containing package names (one per line)")
+    print("output_file: Path to the file where matching .deb URLs will be saved")
+    print("full_list_file: Path to the file where all .deb URLs are saved\n\n")
+    print("Example: python ubuntu_scraper.py ../debian/package_list.txt ../debian/package_url.txt ../targetOS/package_url_port_ubuntu.txt")
+    sys.exit(1)
+
+package_list_file = sys.argv[1]
+output_file = sys.argv[2]
+full_list_file = sys.argv[3]
+
+f = open(output_file, 'w')
 
 # Load the package names from the file
 package_list = load_package_list(package_list_file)

@@ -27,7 +27,7 @@ for pkg in "$@"; do
     apt-get download $(
         apt-rdepends "$pkg" \
         | grep -v "^ " \
-        | grep -v "$EXCLUDE_PATTERNS"
+        | grep -Ev "$EXCLUDE_PATTERNS"
     )
 done
 
