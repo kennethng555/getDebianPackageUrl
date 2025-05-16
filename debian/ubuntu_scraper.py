@@ -67,7 +67,7 @@ def load_package_list(file_path):
         package_list = [line.strip() for line in f.readlines()]
     return package_list
 
-if len(sys.argv) < 3:
+if len(sys.argv) < 4:
     print("Usage: ubuntu_scraper.py <package_list_file> <output_file> <full_list_file>\n\n")
     print("package_list_file: Path to the file containing package names (one per line)")
     print("output_file: Path to the file where matching .deb URLs will be saved")

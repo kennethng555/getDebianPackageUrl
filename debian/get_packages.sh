@@ -18,7 +18,7 @@ fi
 echo "Starting to download package dependencies for: $@"
 
 # Define any exclusions (add or remove patterns as needed)
-EXCLUDE_PATTERNS="^libc-dev$|^debconf-2.0$"
+EXCLUDE_PATTERNS="^libc-dev$|^debconf-2.0$|^dbus-system-bus$|^default-dbus-system-bus$|^mime-support$|^systemd-sysusers$"
 
 for pkg in "$@"; do
     echo "Processing package: $pkg"
