@@ -213,6 +213,7 @@ dislocker_0.7.3-2ubuntu2_amd64.deb
 initramfs-tools-core_0.140ubuntu13.4_all.deb
 libsemanage2_3.3-1build2_amd64.deb
 libsmartcols1_2.37.2-4ubuntu3.4_amd64.deb
+net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb
 libfuse2_2.9.9-5ubuntu3_amd64.deb
 libp11-kit0_0.24.0-6build1_amd64.deb
 libssl3_3.0.2-0ubuntu1.19_amd64.deb

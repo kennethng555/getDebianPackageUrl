@@ -221,6 +221,7 @@ http://archive.ubuntu.com/ubuntu/pool/universe/d/dislocker/dislocker_0.7.3-2ubun
 http://archive.ubuntu.com/ubuntu/pool/main/i/initramfs-tools/initramfs-tools-core_0.140ubuntu13.4_all.deb
 http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage2_3.3-1build2_amd64.deb
 http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/libsmartcols1_2.37.2-4ubuntu3.4_amd64.deb
+http://archive.ubuntu.com/ubuntu/pool/main/n/net-tools/net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb
 http://archive.ubuntu.com/ubuntu/pool/main/f/fuse/libfuse2_2.9.9-5ubuntu3_amd64.deb
 http://archive.ubuntu.com/ubuntu/pool/universe/f/fuse/libfuse2_2.9.9-5ubuntu3_amd64.deb
 http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/libp11-kit0_0.24.0-6build1_amd64.deb
