@@ -33,6 +33,7 @@ done
 
 echo "All downloads completed successfully."
 
-# sudo ../getDebianPackageUrl/get_packages.sh build-essential gcc-arm-linux-gnueabihf python3-pyelftools device-tree-compiler pkg-config uuid-dev
-# sudo ../getDebianPackageUrl/get_packages.sh dislocker cryptsetup libcryptsetup-dev libcryptsetup12 cryptmount cryptmount overlayroot qemu-user-static
-# sudo ../getDebianPackageUrl/get_packages.sh abootimg binfmt-support binutils cpp device-tree-compiler dosfstools lbzip2 libxml2-utils  nfs-kernel-server python3-yaml qemu-user-static sshpass udev uuid-runtime whois openssl cpio
+# sudo ../debian/get_packages.sh build-essential gcc-arm-linux-gnueabihf python3-pyelftools device-tree-compiler pkg-config uuid-dev
+# sudo ../debian/get_packages.sh dislocker cryptsetup libcryptsetup-dev libcryptsetup12 cryptmount cryptmount overlayroot qemu-user-static
+# sudo ../debian/get_packages.sh abootimg binfmt-support binutils cpp device-tree-compiler dosfstools lbzip2 libxml2-utils  nfs-kernel-server python3-yaml qemu-user-static sshpass udev uuid-runtime whois openssl cpio
+# sudo ../debian/get_packages.sh fonts-lato javascript-common libjs-jquery libnss-systemd libpam-modules libpam-systemd ruby-rubygems ruby3.0 rubygems-integration systemd systemd-sysv systemd-timesyncd udev
