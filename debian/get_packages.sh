@@ -17,8 +17,26 @@ fi
 
 echo "Starting to download package dependencies for: $@"
 
-# Define any exclusions (add or remove patterns as needed)
-EXCLUDE_PATTERNS="^libc-dev$|^debconf-2.0$|^dbus-system-bus$|^default-dbus-system-bus$|^mime-support$|^systemd-sysusers$"
+# List of packages to exclude
+EXCLUDE_LIST=(
+    "libc-dev"
+    "debconf-2.0"
+    "dbus-system-bus"
+    "default-dbus-system-bus"
+    "mime-support"
+    "systemd-sysusers"
+    "libc6"
+    "libglib2.0-0"
+    "libcurl3"
+    "dbus-session-bus"
+    "default-dbus-session-bus"
+    "gsettings-backend"
+)
+
+# Build regex pattern for grep -E (e.g. ^pkg1$|^pkg2$|...)
+EXCLUDE_PATTERNS=$(printf "^%s$|" "${EXCLUDE_LIST[@]}")
+# Remove trailing '|'
+EXCLUDE_PATTERNS="${EXCLUDE_PATTERNS%|}"
 
 for pkg in "$@"; do
     echo "Processing package: $pkg"
