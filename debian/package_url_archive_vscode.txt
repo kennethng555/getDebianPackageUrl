@@ -168,3 +168,5 @@ http://archive.ubuntu.com/ubuntu/pool/main/f/fonts-freefont/fonts-freefont-ttf_2
 http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/libbz2-1.0_1.0.8-5build1_amd64.deb
 http://archive.ubuntu.com/ubuntu/pool/main/f/fribidi/libfribidi0_1.0.8-2ubuntu3.1_amd64.deb
 http://archive.ubuntu.com/ubuntu/pool/universe/a/adwaita-icon-theme/adwaita-icon-theme-full_41.0-1ubuntu1_all.deb
+http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/libsqlite3-0_3.37.2-2_amd64.deb
+https://cdimage.debian.org/mirror/ufficiozero.org/uzl-deb/10plus/pool/main/c/code/code_1.100.2-1747260578_amd64.deb
