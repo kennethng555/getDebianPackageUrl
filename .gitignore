@@ -172,7 +172,3 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-
-targetOS/*.txt
-targetOS/data/*.txt
-.DS_Store
