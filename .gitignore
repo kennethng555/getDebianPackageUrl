@@ -175,3 +175,4 @@ cython_debug/
 
 targetOS/*.txt
 targetOS/data/*.txt
+.DS_Store
