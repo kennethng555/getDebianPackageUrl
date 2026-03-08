@@ -7,22 +7,20 @@ Pull debian packages and all dependencies on a debian machine to a directory and
 ```
 mkdir packages
 cd packages
-sudo ../debian/get_packages.sh build-essential
-cd ../debian
-python ./package_to_text.py ./packages
+sudo ../source/get_packages.sh build-essential
+cd ../source
+python ./package_to_text.py ./packages package_list.txt
 ```
 
-The current implementation gets packages for Ubuntu 22.04. The full list of packages are in <em>full_package_list.txt.zip</em>
+The current implementation gets packages for Ubuntu 22.04.
 ```
-unzip full_package_list.txt.zip
-python find_package.py
+python ubuntu_packages.py 22.04 arm64 full_package_list_url.txt
+python find_package.py package_list.txt package_url.txt full_package_list_url.txt
 ```
-
-If needed to pull from another repository, modify the ubuntu_scraper.py and find_package.py does not need to be run.
 
 On your non Debian based machine get all the packages
 ```
 mkdir packages
 cd packages
-./batch_wget.sh ../debian/package_list.txt
+./batch_wget.sh ../source/package_list.txt
 ```
