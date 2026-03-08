@@ -1,5 +1,5 @@
 # getDebianPackageUrl
-Web scraper for getting urls given the deb package names
+Scripts for getting urls given the deb package names
 
 <h1>Usage</h1>
 
