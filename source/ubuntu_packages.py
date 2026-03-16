@@ -2,8 +2,6 @@ import requests
 import gzip
 import sys
 
-BASE_URL = "http://ports.ubuntu.com/"
-
 # Ubuntu version -> codename mapping
 UBUNTU_VERSIONS = {
     "24.04": "noble",
@@ -24,7 +22,14 @@ COMPONENTS = [
 ]
 
 
-def parse_packages(url, outfile):
+def get_base_url(arch):
+    if arch in ["amd64", "i386"]:
+        return "https://archive.ubuntu.com/ubuntu/"
+    else:
+        return "http://ports.ubuntu.com/"
+
+
+def parse_packages(url, base_url, outfile):
 
     print(f"Downloading {url}")
 
@@ -38,7 +43,7 @@ def parse_packages(url, outfile):
         for line in f:
             if line.startswith("Filename:"):
                 path = line.split("Filename:")[1].strip()
-                outfile.write(BASE_URL + path + "\n")
+                outfile.write(base_url + path + "\n")
 
 
 def main(version, arch, output_file):
@@ -48,6 +53,7 @@ def main(version, arch, output_file):
         print("Supported versions:", ", ".join(UBUNTU_VERSIONS.keys()))
         sys.exit(1)
 
+    base_url = get_base_url(arch)
     codename = UBUNTU_VERSIONS[version]
 
     releases = [
@@ -61,9 +67,9 @@ def main(version, arch, output_file):
         for rel in releases:
             for comp in COMPONENTS:
 
-                url = f"{BASE_URL}dists/{rel}/{comp}/binary-{arch}/Packages.gz"
+                url = f"{base_url}dists/{rel}/{comp}/binary-{arch}/Packages.gz"
 
-                parse_packages(url, out)
+                parse_packages(url, base_url, out)
 
 
 if len(sys.argv) < 4:
